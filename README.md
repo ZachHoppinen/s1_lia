@@ -55,13 +55,6 @@ x, y = shapely.from_wkt(aoi_wkt).exterior.xy
 plt.gca().plot(x,y, color = 'k', linewidth = 4)
 ```
 
-
-Or from the command line:
-
-```bash
-s1-lia "<AOI WKT>" /path/to/data_dir
-```
-
 ## Functions
 `find_static_opera_files(aoi, relative_orbit=None, ...)`: Search ASF for matching OPERA products.
 
