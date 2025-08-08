@@ -96,6 +96,7 @@ Uses Shapely, GeoPandas, xarray, and rioxarray.
 
 Data from:
 https://www.earthdata.nasa.gov/data/catalog/asf-opera-l2-cslc-s1-v1-1
+https://d2pn8kiwq2w21t.cloudfront.net/documents/ProductSpec_RTC-S1.pdf
 
 Please use citation:
 NASA/JPL/OPERA. (2023). <i>OPERA Co-registered Single Look Complex from Sentinel-1 validated product (Version 1)</i> [Data set]. NASA Alaska Satellite Facility Distributed Active Archive Center. https://doi.org/10.5067/SNWG/OPERA_L2_CSLC-S1_V1 Date Accessed: 2025-08-08
