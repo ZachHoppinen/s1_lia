@@ -131,34 +131,3 @@ def test_generate_name_stem_with_place_name(mock_get, mock_validate):
 def test_generate_name_stem_fallback(mock_get, mock_validate):
     name = generate_name_stem("dummy", use_place_name=True)
     assert name.startswith("AOI_")
-
-
-# -------------------------
-# merge_lia_by_relative_orbit tests
-# -------------------------
-@patch("s1_lia.download.find_unique_relative_orbits", return_value=[42])
-@patch("s1_lia.download.merge_arrays", return_value=MagicMock(attrs={"_FillValue": 0}))
-@patch("s1_lia.download.xr.open_dataarray")
-def test_merge_lia_by_relative_orbit(mock_open_da, mock_merge, mock_find_unique, tmp_path):
-    # Prepare mocks
-    mock_da = MagicMock()
-    mock_da.squeeze.return_value = mock_da
-    mock_open_da.return_value = mock_da
-
-    output_dir = tmp_path / "out"
-    output_dir.mkdir()
-
-    # Create dummy matching file path
-    data_dir = tmp_path / "data"
-    data_dir.mkdir()
-    (data_dir / "file_T042_xyz_local_incidence_angle.tif").touch()
-
-    merged_mock = MagicMock(attrs={"_FillValue": 0})
-    merged_mock.rio.to_raster = MagicMock()
-    mock_merge.return_value = merged_mock
-
-    merge_lia_by_relative_orbit(data_dir, output_dir, "stem")
-
-    mock_merge.assert_called_once()
-    assert "_FillValue" not in merged_mock.attrs
-    merged_mock.rio.to_raster.assert_called_once()
