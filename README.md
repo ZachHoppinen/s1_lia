@@ -2,6 +2,9 @@
 
 **s1_lia** is a Python package for searching, downloading, and merging OPERA local incidence angle (LIA) files for Sentinel-1 satellite data. It simplifies access to static OPERA RTC products by handling AOI validation, ASF search, reliable downloading, and data merging by relative orbit.
 
+
+<img src="https://github.com/ZachHoppinen/s1_lia/blob/main/title-img.png" width="800">
+
 ---
 
 ## Features
