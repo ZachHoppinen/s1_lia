@@ -111,7 +111,5 @@ For questions or feedback, open an issue or contact Zach Hoppinen @ zmhoppinen@a
 
 ```bash
 bump2version patch # or minor major
-git tag v0.2.0
-git push origin v0.2.0
-
+git push origin vx.x.x # TODO this should not be needed.
 ```
