@@ -106,3 +106,12 @@ https://github.com/egagli/generate_sentinel1_local_incidence_angle_maps
 
 ## Contact
 For questions or feedback, open an issue or contact Zach Hoppinen @ zmhoppinen@alaska.edu
+
+## To bump version and trigger pypi upload
+
+```bash
+bump2version patch # or minor major
+git tag v0.2.0
+git push origin v0.2.0
+
+```
