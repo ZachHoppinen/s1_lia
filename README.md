@@ -61,21 +61,21 @@ s1-lia "<AOI WKT>" /path/to/data_dir
 ```
 
 ## Functions
-find_static_opera_files(aoi, relative_orbit=None, ...): Search ASF for matching OPERA products.
+`find_static_opera_files(aoi, relative_orbit=None, ...)`: Search ASF for matching OPERA products.
 
-download_results(results, data_directory, ...): Download local incidence angle files.
+`download_results(results, data_directory, ...)`: Download local incidence angle files.
 
-merge_lia_by_relative_orbit(downloaded_files, output_directory, name_stem): Merge downloaded files by relative orbit.
+`merge_lia_by_relative_orbit(downloaded_files, output_directory, name_stem)`: Merge downloaded files by relative orbit.
 
-generate_name_stem(aoi, use_place_name=True): Generate descriptive filename stem based on AOI centroid.
+`generate_name_stem(aoi, use_place_name=True)`: Generate descriptive filename stem based on AOI centroid.
 
-get_opera_lia(...): Runs full workflow combining above steps.
+`get_opera_lia(...)`: Runs full workflow combining above steps.
 
 ## Development
 To install in development mode:
 
 ```bash
-git clone https://github.com/yourusername/s1_lia.git
+git clone https://github.com/zachhoppinen/s1_lia.git
 cd s1_lia
 pip install -e .
 ```
