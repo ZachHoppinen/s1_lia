@@ -61,7 +61,7 @@ s1-lia "<AOI WKT>" /path/to/data_dir
 ```
 
 ## Functions
-find_static_opera_files(aoi, relative_orbit=None, ...): Search ASF for matching OPERA products.
+`find_static_opera_files(aoi, relative_orbit=None, ...)`: Search ASF for matching OPERA products.
 
 download_results(results, data_directory, ...): Download local incidence angle files.
 
