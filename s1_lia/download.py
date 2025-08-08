@@ -63,7 +63,7 @@ def download_results(results, data_directory, max_retries=3, retry_delay=2):
                         module="asf_search.download.download"
                     )
                     asf_search.download_url(url, data_directory)
-                logger.info(f"Downloaded {filename} to {data_directory}")
+                # logger.info(f"Downloaded {filename} to {data_directory}")
                 downloaded_files.append(local_fp)
                 break
             except Exception as exc:

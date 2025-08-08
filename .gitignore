@@ -5,3 +5,4 @@ local/
 pytest_cache/
 *.egg-info/
 dist/
+*data/
