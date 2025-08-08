@@ -26,7 +26,9 @@ pip install s1_lia
 
 ## Usage
 
-For ipynb notebooks or python scipts:
+Simple aoi designation, data search and download (packaged into `get_opera_lia`), and plotting to check results.
+
+See documentation of `get_opera_lia` for all optional arguments including to select only a certain relative orbit and setting file names.
 
 ```python
 import s1_lia
@@ -36,9 +38,6 @@ aoi_wkt = 'POLYGON((-107.5 37.6,-107.5 38.0,-108.0 38.0,-108.0 37.6,-107.5 37.6)
 
 # Define directory to store downloaded and merged files
 data_dir = "./data"
-
-# Optionally if you know what orbit you are interested in:
-orbit = 129
 
 # Run full workflow: search, download, merge
 merged_files = s1_lia.get_opera_lia(aoi_wkt, data_dir)
@@ -53,13 +52,6 @@ import matplotlib.pyplot as plt
 xr.open_dataarray(merged_files[0]).rio.reproject('EPSG:4326').plot()
 x, y = shapely.from_wkt(aoi_wkt).exterior.xy
 plt.gca().plot(x,y, color = 'k', linewidth = 4)
-```
-
-
-Or from the command line:
-
-```bash
-s1-lia "<AOI WKT>" /path/to/data_dir
 ```
 
 ## Functions
